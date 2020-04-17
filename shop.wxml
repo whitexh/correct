@@ -1,0 +1,48 @@
+<!-- 功能区 -->
+<view class="futions">
+   <!-- <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate"> -->
+      <view class="fution">
+       <image class="imgs" src="../../image/baobei.png" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+        <text class="fution_text" selectable="false" space="false" decode="false">
+        全部宝贝
+         </text>
+      </view>
+  <!-- </navigator> -->
+  
+  <!-- <navigator class="" target="" url="../Classify_shop/Classify_shop" hover-class="navigator-hover" open-type="navigate"> -->
+    <view class="fution" bindtap="Classify_shop">
+     <image class="imgs" src="../../image/baobeifenlei.png" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+      <text class="fution_text" selectable="false" space="false" decode="false">
+        宝贝分类
+      </text>
+    </view>
+   <!-- </navigator>  -->
+  
+</view>
+<!--二手区产品-->
+<view class="products">
+	<view class="product" wx:for="{{productList}}" bindtap="product">
+			<view class="product_t">
+				<image class="img" src="{{item.image}}" lazy-load="false" binderror="" bindload="" />
+			</view>
+			<view class="product_b">
+        <view class="product_b_t">
+          <text class="text1" selectable="false" space="false" decode="false">
+            {{item.money}}
+          </text>
+				  <text class="text2" selectable="false" space="false" decode="false">
+            {{item.price}}
+          </text>
+          
+          <navigator class="correct" url="#">{{item.correct}}</navigator>
+          
+        </view>
+        <text class="text3" selectable="false" space="false" decode="false">
+           {{item.name}} 
+        </text>
+        
+			</view>
+	</view>
+
+</view>
+  
